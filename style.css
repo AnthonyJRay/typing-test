@@ -1,0 +1,43 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 8px;
+  padding: 8px;
+  background-color: slategrey;
+}
+
+.list {
+  list-style-type: none;
+  display: flex;
+  justify-items: space-evenly;
+  width: 50%
+}
+
+.list li {
+  justify-self: space-between;
+  margin: 8px;
+  padding: 8px;
+}
+
+.logo {
+  margin-left: 16px;
+}
+
+.main {
+  text-align: center;
+  height: 90%;
+}
+
+.box {
+  height: 33%;
+  background-color: green;
+}
+
+/* .footer {
+  height: 5rem;
+  width: 100%;
+  background: red;
+  bottom: 0;
+  position: fixed;
+} */

@@ -37,39 +37,14 @@ showCurrentValue = (event) => {
   document.getElementById("textV").innerText = value;
 
   let arrIndex = newArr[0].split('');
-  const newIndex = arrIndex.map((i) => {
-    if (value === i) {
-      console.log("Match")
+
+
+  for (let i = 0; i < arrIndex.length; i++) {
+    if (value === arrIndex[0]) {
+      console.log("Match");
+      arrIndex.shift()
     } else {
       console.log("Err")
     }
-  })
-
-  // console.log(newIndex)
-  // arrIndex.forEach(i => {
-  //   if (value === arrIndex[0]) {
-  //     arrIndex.shift(i)
-  //     return arrIndex = arrIndex.shift(i)
-  //   }
-  //   // console.log(i)
-  //   console.log(arrIndex)
-  // });
-
-  // for (let i = 0; i < arrIndex.length; i++) {
-  //   if (value === arrIndex[0]) {
-  //     arrIndex.shift([0])
-  //     console.log("Match")
-  //     console.log(arrIndex)
-  //     console.log(arrIndex[0])
-  //   } else {
-  //     console.log("Err")
-  //   }
-  // }
-  // for (i = 0; i < newArr.length; i++) {
-  //   if (value === newArr[i].innerText) {
-  //     console.log("Match");
-  //   } else {
-  //     console.log("Something went wrong")
-  //   }
-  // }
+  }
 }

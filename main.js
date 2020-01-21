@@ -37,12 +37,15 @@ showCurrentValue = (event) => {
   document.getElementById("textV").innerText = value;
 
   let arrIndex = newArr[0].split('');
-  if (value === arrIndex[0]) {
-    arrIndex = arrIndex.shift([0]);
-    console.log([0])
-    console.log(arrIndex)
-  }
+  const newIndex = arrIndex.map((i) => {
+    if (value === i) {
+      console.log("Match")
+    } else {
+      console.log("Err")
+    }
+  })
 
+  // console.log(newIndex)
   // arrIndex.forEach(i => {
   //   if (value === arrIndex[0]) {
   //     arrIndex.shift(i)

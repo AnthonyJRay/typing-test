@@ -1,43 +1,23 @@
-.nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 8px;
+.parent {
+  justify-content: end;
+  margin-left: 10%;
+}
+
+.z {
+  font-size: 1.6rem;
+  padding: 16px;
+  text-shadow: 1px 1px 1px #fff;
+}
+
+.kb {
   padding: 8px;
-  background-color: slategrey;
-}
-
-.list {
-  list-style-type: none;
-  display: flex;
-  justify-items: space-evenly;
-  width: 50%
-}
-
-.list li {
-  justify-self: space-between;
-  margin: 8px;
-  padding: 8px;
-}
-
-.logo {
-  margin-left: 16px;
-}
-
-.main {
+  margin: auto;
   text-align: center;
-  height: 90%;
 }
 
-.box {
-  height: 33%;
-  background-color: green;
+input {
+  /* border: none; */
+  padding: 8px;
+  margin: 10px;
+  width: 60%;
 }
-
-/* .footer {
-  height: 5rem;
-  width: 100%;
-  background: red;
-  bottom: 0;
-  position: fixed;
-} */

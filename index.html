@@ -10,25 +10,21 @@
 </head>
 
 <body>
-
-  <header>
-    <nav class="nav">
-      <span class="logo">Logo</span>
-      <ul class="list">
-        <li>nav-item</li>
-        <li>nav-item</li>
-        <li>nav-item</li>
-      </ul>
-    </nav>
-  </header>
-  <h1>Test #2</h1>
-  <main class="main">
-    <div class="box one">Box 1</div>
-    <div class="box two">Box 2</div>
-    <div class="box three">Box 3</div>
-  </main>
-  <footer class="footer">This is the footer</footer>
-
+  <div class="main-container">
+    <div class="main-top">
+      <div class="wpm">
+        WPM Display
+      </div>
+      <div class="timer">
+        Timer
+      </div>
+    </div>
+    <div class="parent"></div>
+    <div class="kb">
+      <input id="textValue" onInput="showCurrentValue(event)" type="text">
+      <p id="textV">Placeholder Text</p>
+    </div>
+  </div>
   <script src="./main.js"></script>
 </body>
 

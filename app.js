@@ -15,6 +15,9 @@ const words = [
 
 const inputArr = []
 let randomWords = []
+let timer;
+let accuracy;
+let wpm
 
 displayWords = () => {
   const parent = document.querySelector("div.parent");
@@ -27,16 +30,14 @@ displayWords = () => {
     parent.append(span)
   }
 }
-
 displayWords()
+
 
 getInputValue = (event) => {
   let value = event.target.value;
-  inputArr.push(value)
-  // console.log(inputArr)
+  // inputArr.push(value)
   const input = document.getElementById("textValue")
   const inputValue = input.value.split("");
-
-  // console.log(input)
-  console.log(inputValue)
+  inputArr.push(...inputValue);
+  console.log(inputArr)
 }

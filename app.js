@@ -38,6 +38,6 @@ getInputValue = (event) => {
   // inputArr.push(value)
   const input = document.getElementById("textValue")
   const inputValue = input.value.split("");
-  inputArr.push(...inputValue);
+  inputArr.push(inputValue);
   console.log(inputArr)
 }

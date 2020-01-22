@@ -11,21 +11,31 @@
 
 <body>
   <div class="main-container">
-    <div class="main-top">
-      <div class="wpm">
-        WPM Display
+
+    <div class="header-container">
+      <h1 id="title">Word Speed Test</h1>
+    </div>
+
+    <div class="data-container">
+      <div class="data">
+        <p id="score">00</p>
       </div>
-      <div class="timer">
-        Timer
+      <div class="data">
+        <p id="timer">00</p>
       </div>
     </div>
-    <div class="parent"></div>
-    <div class="kb">
-      <input id="textValue" onInput="getInputValue(event)" type="text">
-      <p id="textV">Placeholder Text</p>
+
+    <div class="words-container">
+      <div class="word-display">
+        <p id="word">Current Word</p>
+      </div>
+      <div class="word-input">
+        <input id="wordsInput" type="text">
+      </div>
     </div>
+
   </div>
-  <!-- <script src="./main.js"></script> -->
+
   <script src="./app.js"></script>
 </body>
 

@@ -1,23 +1,32 @@
-.parent {
-  justify-content: end;
-  margin-left: 10%;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.z {
-  font-size: 1.6rem;
-  padding: 16px;
-  text-shadow: 1px 1px 1px #fff;
-}
-
-.kb {
-  padding: 8px;
-  margin: auto;
+.main-container {
   text-align: center;
+  height: 100vh;
+
+  background-color: #fff;
+}
+#title {
+  margin: 16px;
+  padding: 16px;
 }
 
-input {
-  /* border: none; */
-  padding: 8px;
-  margin: 10px;
-  width: 60%;
+.data-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.data {
+  font-size: 4.25rem;
+  margin: 1em;
+}
+
+#word {
+  font-size: 3rem;
+  margin: 16px;
+  padding: 16px;
 }

@@ -7,12 +7,18 @@
 .main-container {
   text-align: center;
   height: 100vh;
-
-  background-color: #fff;
+  width: 100%;
+  background-color: rgba(0, 51, 134, 0.589);
+  font-family: 'Open Sans', sans-serif;
+  position: fixed;
 }
 #title {
   margin: 16px;
   padding: 16px;
+  background-color: lightcyan;
+  border-radius: 5px;
+  font-family: 'Roboto', sans-serif;
+  color: rgb(56, 56, 56);
 }
 
 .data-container {
@@ -21,7 +27,7 @@
   justify-content: center;
 }
 .data {
-  font-size: 4.25rem;
+  font-size: 2.25rem;
   margin: 1em;
 }
 
@@ -29,4 +35,13 @@
   font-size: 3rem;
   margin: 16px;
   padding: 16px;
+}
+
+#input {
+  border: none;
+  padding: 16px;
+  width: 75%;
+  font-size: 1.5rem;
+  background-color: rgba(25, 25, 25, 0.1);
+  border: 1px solid rgba(25, 25, 25, 0.7);
 }

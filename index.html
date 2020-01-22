@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./style.css">
 </head>
 
@@ -18,10 +19,12 @@
 
     <div class="data-container">
       <div class="data">
-        <p id="score">00</p>
+        <p class="score-text">Score</p>
+        <p id="score"></p>
       </div>
       <div class="data">
-        <p id="timer">00</p>
+        <p class="time-text">Time</p>
+        <p id="timer"></p>
       </div>
     </div>
 
@@ -30,8 +33,12 @@
         <p id="word">Current Word</p>
       </div>
       <div class="word-input">
-        <input id="wordsInput" type="text">
+        <input id="input" onKeyUp="getInput(event)" type="text">
       </div>
+    </div>
+
+    <div class="start-game-modal">
+
     </div>
 
   </div>

@@ -13,31 +13,58 @@ const words = [
   'warehouse', 'storage', 'forage', 'foliage', 'unearthing', 'carbon', 'intelligence', 'effective', 'affirmative', 'memorandum'
 ]
 
-const inputArr = []
-let randomWords = []
-let timer;
-let accuracy;
-let wpm
+const currentWord = document.querySelector("#word");
+const inputWord = document.querySelector("#input");
+const currentScore = document.querySelector("#score");
+const countdown = document.querySelector("#timer");
+console.log(countdown.innerHTML)
+let timer = 5;
+let score = 0;
 
-displayWords = () => {
-  const parent = document.querySelector("div.parent");
-  for (let i = 0; i < words.length; i++) {
-    const span = document.createElement("span");
-    const rndWords = words[Math.floor(Math.random() * words.length)]
-    randomWords.push(i);
-    span.className = "z"
-    span.append(rndWords)
-    parent.append(span)
+const startGame = () => {
+  setInterval(updateScore, 500)
+  // setInterval(updateTimer, 1000)
+  randWord()
+}
+
+const updateScore = () => {
+  currentScore.innerHTML = score;
+}
+
+const updateTimer = () => {
+  countdown.innerHTML = timer--;
+  if (countdown.innerHTML === "0") {
+    timer = 0;
+    alert("You lost")
   }
 }
-displayWords()
 
-
-getInputValue = (event) => {
-  let value = event.target.value;
-  // inputArr.push(value)
-  const input = document.getElementById("textValue")
-  const inputValue = input.value.split("");
-  inputArr.push(inputValue);
-  console.log(inputArr)
+// Generate random number
+const randWord = () => {
+  let randIndex = [Math.floor(Math.random() * words.length)]
+  currentWord.innerHTML = words[randIndex];
 }
+
+// Show random Word
+
+
+// Match input to the Current Word
+matchInput = () => {
+  let value = event.target.value;
+  if (value === currentWord.innerHTML) {
+    score++
+    randWord()
+    event.target.value = "";
+  } else {
+    timer--
+    score--
+  }
+}
+
+getInput = (event) => {
+  if (event.keyCode === 13) {
+    matchInput()
+  }
+}
+
+startGame()

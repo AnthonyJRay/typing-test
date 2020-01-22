@@ -13,42 +13,30 @@ const words = [
   'warehouse', 'storage', 'forage', 'foliage', 'unearthing', 'carbon', 'intelligence', 'effective', 'affirmative', 'memorandum'
 ]
 
-getWords = () => {
-  let p = document.querySelector("div.parent")
-  newArr = []
+const inputArr = []
+let randomWords = []
+
+displayWords = () => {
+  const parent = document.querySelector("div.parent");
   for (let i = 0; i < words.length; i++) {
-    const randomWords = words[Math.floor(Math.random() * words.length)]
-    newArr.push(i)
-    let s = document.createElement("span")
-    s.className = "z"
-    s.append(randomWords)
-    p.append(s)
+    const span = document.createElement("span");
+    const rndWords = words[Math.floor(Math.random() * words.length)]
+    randomWords.push(i);
+    span.className = "z"
+    span.append(rndWords)
+    parent.append(span)
   }
-
 }
-getWords();
 
+displayWords()
 
-
-
-
-showCurrentValue = (event) => {
-  inputArr = []
-  const value = event.target.value;
+getInputValue = (event) => {
+  let value = event.target.value;
   inputArr.push(value)
-  let newInput = inputArr.split('');
-  console.log(newInput)
-  document.getElementById("textV").innerText = value;
-  // console.log(value)
-  let arrIndex = newArr[0].split('');
+  // console.log(inputArr)
+  const input = document.getElementById("textValue")
+  const inputValue = input.value.split("");
 
-
-  for (let i = 0; i < arrIndex.length; i++) {
-    if (value === arrIndex[0]) {
-      console.log("Match");
-      arrIndex.shift()
-    } else {
-      console.log("Err")
-    }
-  }
+  // console.log(input)
+  console.log(inputValue)
 }

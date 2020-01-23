@@ -17,13 +17,11 @@ const currentWord = document.querySelector("#word");
 const inputWord = document.querySelector("#input");
 const currentScore = document.querySelector("#score");
 const countdown = document.querySelector("#timer");
-console.log(countdown.innerHTML)
 let timer = 5;
 let score = 0;
-
 const startGame = () => {
   setInterval(updateScore, 500)
-  // setInterval(updateTimer, 1000)
+  setInterval(updateTimer, 1000)
   randWord()
 }
 
@@ -32,10 +30,11 @@ const updateScore = () => {
 }
 
 const updateTimer = () => {
-  countdown.innerHTML = timer--;
-  if (countdown.innerHTML === "0") {
-    timer = 0;
-    alert("You lost")
+  countdown.innerHTML = timer;
+  timer--
+  if (timer === 0) {
+    countdown.innerHTML = 0;
+    // alert("You lost")
   }
 }
 
@@ -56,7 +55,6 @@ matchInput = () => {
     randWord()
     event.target.value = "";
   } else {
-    timer--
     score--
   }
 }

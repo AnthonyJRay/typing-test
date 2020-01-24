@@ -20,14 +20,19 @@ const countdown = document.querySelector("#timer");
 const startModal = document.querySelector(".start-game-modal")
 const startBtn = document.querySelector(".startBtn")
 
-let timer = 5;
-let score = 0;
+let timer
+let score
+let clearScore
+let clearTimer
 const startGame = () => {
-  startModal.classList.add("hidden")
-  setInterval(updateScore, 500)
-  setInterval(updateTimer, 1000)
+  timer = 10
+  score = 0
   randWord()
+  startModal.classList.add("hidden")
+  clearScore = setInterval(updateScore, 500)
+  clearTimer = setInterval(updateTimer, 1000)
 }
+
 
 const updateScore = () => {
   currentScore.innerHTML = score;
@@ -36,27 +41,31 @@ const updateScore = () => {
 const updateTimer = () => {
   countdown.innerHTML = timer;
   timer--
-  if (timer <= 0) {
-    countdown.innerHTML = "0";
+  if (countdown.innerHTML <= 0) {
+    clearInterval(clearTimer)
     modalLost()
-    // dataReset()
+    clearInterval(clearScore, clearTimer)
+
   }
 }
 
-// Generate random number
+// Generate and show random word
 const randWord = () => {
   let randIndex = [Math.floor(Math.random() * words.length)]
   currentWord.innerHTML = words[randIndex];
 }
 
-// Show random Word
-
 
 // Match input to the Current Word
-matchInput = () => {
+const matchInput = () => {
+  let match;
   let value = event.target.value;
   if (value === currentWord.innerHTML) {
+    match = true
+  }
+  if (match === true) {
     score++
+    timer = timer + 1
     randWord()
     event.target.value = "";
   } else {
@@ -70,16 +79,9 @@ getInput = (event) => {
   }
 }
 
-modalLost = () => {
+modalLost = (event) => {
   startModal.classList.remove("hidden")
   startBtn.innerHTML = "Try again?"
+  startBtn.setAttribute("autofocus")
+  event.target.value = " ";
 }
-
-dataReset = () => {
-  timer = 5
-  score = 0
-}
-
-
-
-startGame()

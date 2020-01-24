@@ -10,7 +10,7 @@
   width: 100%;
   background: linear-gradient(#e66465, #9198e5);
   font-family: 'Open Sans', sans-serif;
-  position: fixed;
+  position: fixeddda;
 }
 #title {
   margin: 16px;

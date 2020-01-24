@@ -12,6 +12,7 @@
   font-family: 'Open Sans', sans-serif;
   position: fixeddda;
 }
+
 #title {
   margin: 16px;
   padding: 16px;
@@ -26,6 +27,7 @@
   flex-direction: row;
   justify-content: center;
 }
+
 .data {
   font-size: 2.25rem;
   margin: 1em;
@@ -53,7 +55,6 @@
 }
 
 .start-game-modal {
-  display: none;
   background: linear-gradient(#201675f6, #9198e5);
   height: 100vh;
   position: absolute;
@@ -68,19 +69,20 @@
   border-radius: 25px;
 }
 
-.modalHide {
+.hidden {
   display: none;
 }
 
 .startBtn {
   margin-top: 25%;
   padding: 16px;
-  background: linear-gradient(#0d720af6, #16b416fa);
+  background: linear-gradient(#0da708f6, #45e645fa);
   border: 1px solid #9198e5;
   cursor: pointer;
 }
+
 .startBtn:hover {
-  background-color: black;
+  transform: scale(1.1);
 }
 
 .instructions {
@@ -88,5 +90,3 @@
   padding: 16px;
   color: #fff;
 }
-
-.;

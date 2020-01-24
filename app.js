@@ -17,9 +17,13 @@ const currentWord = document.querySelector("#word");
 const inputWord = document.querySelector("#input");
 const currentScore = document.querySelector("#score");
 const countdown = document.querySelector("#timer");
+const startModal = document.querySelector(".start-game-modal")
+const startBtn = document.querySelector(".startBtn")
+
 let timer = 5;
 let score = 0;
 const startGame = () => {
+  startModal.classList.add("hidden")
   setInterval(updateScore, 500)
   setInterval(updateTimer, 1000)
   randWord()
@@ -32,9 +36,10 @@ const updateScore = () => {
 const updateTimer = () => {
   countdown.innerHTML = timer;
   timer--
-  if (timer === 0) {
-    countdown.innerHTML = 0;
-    // alert("You lost")
+  if (timer <= 0) {
+    countdown.innerHTML = "0";
+    modalLost()
+    // dataReset()
   }
 }
 
@@ -64,5 +69,17 @@ getInput = (event) => {
     matchInput()
   }
 }
+
+modalLost = () => {
+  startModal.classList.remove("hidden")
+  startBtn.innerHTML = "Try again?"
+}
+
+dataReset = () => {
+  timer = 5
+  score = 0
+}
+
+
 
 startGame()

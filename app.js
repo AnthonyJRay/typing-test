@@ -26,7 +26,7 @@ let clearScore
 let clearTimer
 
 const startGame = () => {
-  timer = 25
+  timer = 30
   score = 0
   randWord()
   startModal.classList.add("hidden")
@@ -43,20 +43,21 @@ const updateTimer = () => {
   timer--
   if (score >= 5) {
     clearInterval(clearTimer)
-    clearTimer = setInterval(updateTimer, 850)
+    clearTimer = setInterval(updateTimer, 800)
   }
   if (score >= 50) {
     clearInterval(clearTimer)
-    clearTimer = setInterval(updateTimer, 650)
+    clearTimer = setInterval(updateTimer, 666)
   }
   if (score >= 100) {
     clearInterval(clearTimer)
-    clearTimer = setInterval(updateTimer, 550)
+    clearTimer = setInterval(updateTimer, 500)
   }
   if (score > 125) {
     clearInterval(clearTimer)
-    clearTimer = setInterval(updateTimer, 400)
+    clearTimer = setInterval(updateTimer, 333)
   } else if (countdown.innerHTML <= 0) {
+    countdown.innerHTML = 0;
     clearInterval(clearTimer)
     modalLost()
   }
@@ -78,7 +79,7 @@ const matchInput = () => {
   }
   if (match === true) {
     score++
-    timer = timer + 3
+    timer = timer + 2
     randWord()
     event.target.value = "";
   } else {
@@ -94,7 +95,6 @@ getInput = (event) => {
 
 modalLost = () => {
   startModal.classList.remove("hidden")
-  startModal.innerText = "Time has run out, you lost!"
   startBtn.innerHTML = "Try again?"
   startBtn.setAttribute("autofocus", "")
 }

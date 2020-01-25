@@ -59,35 +59,12 @@
   position: absolute;
   top: 15%;
   left: 15%;
-  /* margin-left: -25%;
-  margin-top: -25%; */
   width: 75%;
   height: 65%;
   z-index: 100;
   border: 1px solid #fff;
   border-radius: 25px;
 }
-
-@media (min-width: 768px) {
-  .start-game-modal {
-    font-size: 1.5rem;
-  }
-
-  .startBtn {
-    font-size: 1.3rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .start-game-modal {
-    font-size: 2.1rem;
-  }
-}
-
-@media (min-width: 1200px) {
-  .start-game-modal {}
-}
-
 
 .hidden {
   display: none;
@@ -111,8 +88,30 @@
   transform: scale(1.1);
 }
 
+.instructions-header {
+  margin-top: 32px;
+  color: #fff;
+  text-decoration: underline;
+  text-decoration-color: #9198e5;
+}
+
 .instructions {
-  margin: 16px;
   padding: 16px;
   color: #fff;
+}
+
+/* Media Queries */
+
+@media (min-height: 724px) {
+  .start-game-modal {
+    height: 75%;
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .start-game-modal {
+    max-width: 50%;
+    margin-left: 12%;
+  }
 }

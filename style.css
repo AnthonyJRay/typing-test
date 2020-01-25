@@ -73,8 +73,14 @@
   display: none;
 }
 
+.modalHeader {
+  color: #fff;
+  margin: auto;
+  padding: 10%;
+}
+
 .startBtn {
-  margin-top: 25%;
+  margin-top: 10%;
   padding: 16px;
   background: linear-gradient(#0da708f6, #45e645fa);
   border: 1px solid #9198e5;

@@ -44,7 +44,6 @@ const updateTimer = () => {
   if (countdown.innerHTML <= 0) {
     clearInterval(clearTimer)
     modalLost()
-    clearInterval(clearScore, clearTimer)
 
   }
 }
@@ -81,6 +80,7 @@ getInput = (event) => {
 
 modalLost = (event) => {
   startModal.classList.remove("hidden")
+  startModal.innerText = "Time has run out, you lost!"
   startBtn.innerHTML = "Try again?"
   startBtn.setAttribute("autofocus")
   event.target.value = " ";

@@ -76,7 +76,7 @@ const randWord = () => {
 // Match input to the Current Word
 const matchInput = () => {
   let match;
-  let value = event.target.value;
+  let value = event.target.value.toLowerCase();
   if (value === currentWord.innerHTML) {
     match = true
   }

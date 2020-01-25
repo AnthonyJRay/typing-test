@@ -3,14 +3,17 @@ const words = [
   'cook', 'look', 'green', 'red', 'clean', 'yellow', 'blue', 'black', 'white', 'blend', 'cleanse', 'meat', 'seat',
   'hook', 'fork', 'spoon', 'knife', 'knives', 'crater', 'cater', 'eat', 'ate', 'ram', 'run', 'ran', 'write', 'write', 'quiet',
   'quite', 'quilt', 'silt', 'build', 'built', 'drill', 'saw', 'remember', 'hopeful', 'joyful', 'jolly', 'spirit', 'intense',
-  'tense', 'blend', 'cart', 'tart', 'redeemer', 'raindeer', 'antlers', 'desk', 'computer', 'laptop', 'processor', 'graphic',
+  'tense', 'blend', 'cart', 'tart', 'redeemer', 'reindeer', 'antlers', 'desk', 'computer', 'laptop', 'processor', 'graphic',
   'movie', 'sling', 'cling', 'drink', 'brink', 'think', 'thought', 'cold', 'flow', 'trough', 'drought', 'slow', 'crow',
   'loud', 'sought', 'bought', 'ground', 'pound', 'lean', 'screen', 'friend', 'credible', 'loyal', 'loyalty', 'honest',
   'honesty', 'recommend', 'line', 'brine', 'crime', 'slime', 'lime', 'grime', 'prime', 'sling', 'fling', 'kink', 'sink',
   'link', 'drink', 'crop', 'drop', 'mop', 'kong', 'long', 'effigy', 'condescending', 'condolence', 'crimson', 'rememberance',
   'philantropy', 'entrepeneur', 'clearing', 'smearing', 'adolescence', 'paradigm', 'vanguard', 'cruelty', 'paradox', 'delusion',
   'forgotten', 'judgement', 'honor', 'cordial', 'complexity', 'comprehension', 'mentality', 'manufacturing', 'production',
-  'warehouse', 'storage', 'forage', 'foliage', 'unearthing', 'carbon', 'intelligence', 'effective', 'affirmative', 'memorandum'
+  'warehouse', 'storage', 'forage', 'foliage', 'unearthing', 'carbon', 'intelligence', 'effective', 'affirmative', 'memorandum',
+  'javascript', 'context', 'reaction', 'java', 'collateral', 'kingdom', 'marque', 'fallen', 'quintessential', 'conquest',
+  'quality', 'candle', 'gander', 'squad', 'roll', 'ramp', 'request', 'relinquish', 'wander', 'waste', 'label', 'standing',
+  'stroll', 'least', 'minimum', 'minimal', 'maximum', 'mandatory', 'requirements', 'tingle', 'rope', 'raft', 'rabbit'
 ]
 
 const currentWord = document.querySelector("#word");

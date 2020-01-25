@@ -104,6 +104,7 @@ modalLost = () => {
   modalHeader.innerHTML = "Time's up!"
   modalFooterHeader.innerHTML = "Final Score:"
   modalFooterText.innerHTML = score
+  modalFooterText.classList.add("finalScore")
   startBtn.innerHTML = "Try again?"
   startBtn.setAttribute("autofocus", "")
 }

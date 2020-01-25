@@ -122,6 +122,10 @@
 .modal-footer-text {
   padding: 8px;
   color: #fff;
+  font-size: 20px;
+}
+
+.finalScore {
   font-size: 4em;
 }
 

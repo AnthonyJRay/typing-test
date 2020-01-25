@@ -24,14 +24,14 @@ let timer
 let score
 let clearScore
 let clearTimer
-let updateSpeed = 1000
+
 const startGame = () => {
   timer = 25
   score = 0
   randWord()
   startModal.classList.add("hidden")
   clearScore = setInterval(updateScore, 500)
-  clearTimer = setInterval(updateTimer, updateSpeed)
+  clearTimer = setInterval(updateTimer, 1000)
 }
 
 const updateScore = () => {
@@ -41,18 +41,21 @@ const updateScore = () => {
 const updateTimer = () => {
   countdown.innerHTML = timer;
   timer--
-  if (countdown.innerHTML <= 0) {
+  if (score >= 5) {
     clearInterval(clearTimer)
-    modalLost()
-  }
-  if (score >= 25) {
-    clearTimer = setInterval(updateTimer, 800)
+    clearTimer = setInterval(updateTimer, 850)
   }
   if (score >= 50) {
-    clearTimer = setInterval(updateTimer, 600)
+    clearInterval(clearTimer)
+    clearTimer = setInterval(updateTimer, 650)
   }
   if (score >= 100) {
-    clearTimer = setInterval(updateTimer, 500)
+    clearInterval(clearTimer)
+    clearTimer = setInterval(updateTimer, 550)
+  }
+  if (score > 125) {
+    clearInterval(clearTimer)
+    clearTimer = setInterval(updateTimer, 400)
   } else if (countdown.innerHTML <= 0) {
     clearInterval(clearTimer)
     modalLost()
@@ -75,7 +78,7 @@ const matchInput = () => {
   }
   if (match === true) {
     score++
-    timer = timer + 2
+    timer = timer + 3
     randWord()
     event.target.value = "";
   } else {
@@ -89,10 +92,9 @@ getInput = (event) => {
   }
 }
 
-modalLost = (event) => {
+modalLost = () => {
   startModal.classList.remove("hidden")
   startModal.innerText = "Time has run out, you lost!"
   startBtn.innerHTML = "Try again?"
-  startBtn.setAttribute("autofocus")
-  event.target.value = " ";
+  startBtn.setAttribute("autofocus", "")
 }

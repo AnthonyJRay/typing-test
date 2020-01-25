@@ -14,11 +14,11 @@
 }
 
 .header-container {
-  margin: 32px;
+  margin: 16px;
 }
 
 #title {
-  max-width: 50%;
+  max-width: 95%;
   margin: auto;
   padding: 16px;
   background-color: rgb(184, 175, 236);
@@ -34,8 +34,9 @@
 }
 
 .data {
-  font-size: 2.25rem;
-  margin: 1em;
+  font-size: 1.75rem;
+  margin: 8px;
+  padding: 8px;
 }
 
 .time-text,
@@ -47,7 +48,7 @@
 }
 
 .word-display {
-  max-width: 30%;
+  max-width: 85%;
   margin: auto;
   border: 3px solid #fff;
   border-radius: 5px;

@@ -22,6 +22,9 @@ const currentScore = document.querySelector("#score");
 const countdown = document.querySelector("#timer");
 const startModal = document.querySelector(".start-game-modal")
 const startBtn = document.querySelector(".startBtn")
+const modalHeader = document.querySelector(".modalHeader")
+const modalFooterHeader = document.querySelector(".modal-footer-header")
+const modalFooterText = document.querySelector(".modal-footer-text")
 
 let timer
 let score
@@ -29,7 +32,7 @@ let clearScore
 let clearTimer
 
 const startGame = () => {
-  timer = 999
+  timer = 1
   score = 0
   randWord()
   startModal.classList.add("hidden")
@@ -98,6 +101,9 @@ getInput = (event) => {
 
 modalLost = () => {
   startModal.classList.remove("hidden")
+  modalHeader.innerHTML = "Time's up!"
+  modalFooterHeader.innerHTML = "Final Score:"
+  modalFooterText.innerHTML = score
   startBtn.innerHTML = "Try again?"
   startBtn.setAttribute("autofocus", "")
 }

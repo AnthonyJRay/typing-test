@@ -108,20 +108,38 @@ modalLost = () => {
   modalFooterText.classList.add("finalScore")
   startBtn.innerHTML = "Try again?"
   startBtn.setAttribute("autofocus", "")
+  setScore()
 }
 
-// createLeaderboard = () => {
-//   const list = document.createElement("ol")
-//     .classList.add("leaderboard-list");
+setScore = () => {
+  localStorage.setItem("score", score)
+}
 
-//   let item = document.createElement("li")
-//     .classList.add("leaderboard-item");
-//   let item = document.createElement("li")
-//     .classList.add("leaderboard-item");
-//   let item = document.createElement("li")
-//     .classList.add("leaderboard-item");
+createLeaderboard = () => {
+  let scoreList = document.createElement("ol");
+  scoreList.classList.add("scores-list")
 
-//   list.append(item);
-//   leaderboard.append(list);
+  let scoreItem = document.createElement("li");
+  scoreItem.classList.add("scores-item")
+  scoreItem.innerText = "Placeholder Text"
 
-// }
+  let returnBtn = document.createElement("button");
+  returnBtn.innerText = "Return to Game"
+  scores = localStorage.getItem(score)
+  scoreItem.innerHTML = scores
+
+  scoreList.append(scoreItem);
+  leaderboard.append(returnBtn)
+  leaderboard.append(scoreList)
+  console.log(scoreList)
+}
+createLeaderboard()
+
+
+showLeaderboard = (e) => {
+  e.target.classList.add("hidden")
+}
+
+closeLeaderboard = (e) => {
+  e.target.classList.remove("hidden")
+}

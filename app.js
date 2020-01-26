@@ -16,15 +16,16 @@ const words = [
   'stroll', 'least', 'minimum', 'minimal', 'maximum', 'mandatory', 'requirements', 'tingle', 'rope', 'raft', 'rabbit'
 ]
 
-const currentWord = document.querySelector("#word");
-const inputWord = document.querySelector("#input");
-const currentScore = document.querySelector("#score");
-const countdown = document.querySelector("#timer");
+const currentWord = document.querySelector("#word")
+const inputWord = document.querySelector("#input")
+const currentScore = document.querySelector("#score")
+const countdown = document.querySelector("#timer")
 const startModal = document.querySelector(".start-game-modal")
 const startBtn = document.querySelector(".startBtn")
 const modalHeader = document.querySelector(".modalHeader")
 const modalFooterHeader = document.querySelector(".modal-footer-header")
 const modalFooterText = document.querySelector(".modal-footer-text")
+const leaderboard = document.querySelector(".leaderboard")
 
 let timer
 let score
@@ -108,3 +109,19 @@ modalLost = () => {
   startBtn.innerHTML = "Try again?"
   startBtn.setAttribute("autofocus", "")
 }
+
+// createLeaderboard = () => {
+//   const list = document.createElement("ol")
+//     .classList.add("leaderboard-list");
+
+//   let item = document.createElement("li")
+//     .classList.add("leaderboard-item");
+//   let item = document.createElement("li")
+//     .classList.add("leaderboard-item");
+//   let item = document.createElement("li")
+//     .classList.add("leaderboard-item");
+
+//   list.append(item);
+//   leaderboard.append(list);
+
+// }

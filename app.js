@@ -33,7 +33,7 @@ let clearScore
 let clearTimer
 
 const startGame = () => {
-  timer = 30
+  timer = 5
   score = 0
   randWord()
   startModal.classList.add("hidden")
@@ -108,38 +108,4 @@ modalLost = () => {
   modalFooterText.classList.add("finalScore")
   startBtn.innerHTML = "Try again?"
   startBtn.setAttribute("autofocus", "")
-  setScore()
-}
-
-setScore = () => {
-  localStorage.setItem("score", score)
-}
-
-createLeaderboard = () => {
-  let scoreList = document.createElement("ol");
-  scoreList.classList.add("scores-list")
-
-  let scoreItem = document.createElement("li");
-  scoreItem.classList.add("scores-item")
-  scoreItem.innerText = "Placeholder Text"
-
-  let returnBtn = document.createElement("button");
-  returnBtn.innerText = "Return to Game"
-  scores = localStorage.getItem(score)
-  scoreItem.innerHTML = scores
-
-  scoreList.append(scoreItem);
-  leaderboard.append(returnBtn)
-  leaderboard.append(scoreList)
-  console.log(scoreList)
-}
-createLeaderboard()
-
-
-showLeaderboard = (e) => {
-  e.target.classList.add("hidden")
-}
-
-closeLeaderboard = (e) => {
-  e.target.classList.remove("hidden")
 }

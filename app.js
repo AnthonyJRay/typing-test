@@ -33,7 +33,7 @@ let clearScore
 let clearTimer
 
 const startGame = () => {
-  timer = 5
+  timer = 30
   score = 0
   randWord()
   startModal.classList.add("hidden")
